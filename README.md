@@ -16,7 +16,7 @@ Please add your scripts and programs to the `scripts` folder.
 The interface for this SDK is still being built out but follows the structure in the 
 [Sumo Logic Python SDK](https://github.com/SumoLogic/sumologic-python-sdk).
 
-Exampe scripts are located in the `scripts` director of the GitHub repo.
+Exampe scripts are located in the `scripts` directory of the [GitHub repo](https://github.com/grokify/sumologic-sdk-ruby).
 
 ## More Info
 
