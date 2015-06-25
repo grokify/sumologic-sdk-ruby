@@ -5,8 +5,18 @@ Sumo Logic Ruby SDK
 [![Code Climate](https://codeclimate.com/github/grokify/sumologic-sdk-ruby/badges/gpa.svg)](https://codeclimate.com/github/grokify/sumologic-sdk-ruby)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/grokify/sumologic-sdk-ruby/master/LICENSE.txt)
 
-Ruby interface to the Sumo Logic REST API.  The idea is to make it easier to
-hit the API in Ruby code.  Please add your scripts and programs to the `scripts`
-folder.
+Ruby interface to the Sumo Logic REST API.
 
-For more info see the [Sumo Logic API Documentation](https://github.com/SumoLogic/sumo-api-doc/wiki)
+Please add your scripts and programs to the `scripts` folder.
+
+## Usage
+
+The interface for this SDK is still being built out but follows the structure in the 
+[Sumo Logic Python SDK](https://github.com/SumoLogic/sumologic-python-sdk).
+
+Exampe scripts are located in the `scripts` director of the GitHub repo.
+
+## More Info
+
+1. [Sumo Logic API Documentation](https://github.com/SumoLogic/sumo-api-doc/wiki)
+2. [Sumo Logic Python SDK](https://github.com/SumoLogic/sumologic-python-sdk)
