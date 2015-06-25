@@ -22,3 +22,15 @@ Exampe scripts are located in the `scripts` director of the GitHub repo.
 
 1. [Sumo Logic API Documentation](https://github.com/SumoLogic/sumo-api-doc/wiki)
 2. [Sumo Logic Python SDK](https://github.com/SumoLogic/sumologic-python-sdk)
+
+## Contributions
+
+Any reports of problems, comments or suggestions are most welcome.
+
+Please report these on [Github](https://github.com/grokify/sumologic-sdk-ruby)
+
+## License
+
+RingCentral SDK is available under an MIT-style license. See {file:LICENSE.txt} for details.
+
+RingCentral SDK &copy; 2015 by John Wang
