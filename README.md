@@ -1,8 +1,10 @@
 Sumo Logic Ruby SDK
 ===================
 
+[![Gem Version](https://badge.fury.io/rb/sumologic.svg)](http://badge.fury.io/rb/sumologic)
 [![Build Status](https://img.shields.io/travis/grokify/sumologic-sdk-ruby/master.svg)](https://travis-ci.org/grokify/sumologic-sdk-ruby)
 [![Code Climate](https://codeclimate.com/github/grokify/sumologic-sdk-ruby/badges/gpa.svg)](https://codeclimate.com/github/grokify/sumologic-sdk-ruby)
+[![Docs](https://img.shields.io/badge/docs-rubydoc-blue.svg)](http://www.rubydoc.info/gems/sumologic/)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/grokify/sumologic-sdk-ruby/master/LICENSE.txt)
 
 Ruby interface to the Sumo Logic REST API.
