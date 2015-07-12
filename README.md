@@ -25,10 +25,19 @@ Note, for the search methods, the query parameter can be exactly the same query 
 
 Example scripts are located in the `scripts` directory of the [GitHub repo](https://github.com/grokify/sumologic-sdk-ruby).
 
-## More Info
+## Links
 
-1. [Sumo Logic API Documentation](https://github.com/SumoLogic/sumo-api-doc/wiki)
-2. [Sumo Logic Python SDK](https://github.com/SumoLogic/sumologic-python-sdk)
+Project Repo
+
+* https://github.com/grokify/ringcentral-sdk-ruby
+
+Sumo Logic API Documentation
+
+* https://github.com/SumoLogic/sumo-api-doc/wiki
+
+Sumo Logic Python SDK
+
+* https://github.com/SumoLogic/sumologic-python-sdk
 
 ## Contributions
 
