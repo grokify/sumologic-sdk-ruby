@@ -29,7 +29,7 @@ Example scripts are located in the `scripts` directory of the [GitHub repo](http
 
 Project Repo
 
-* https://github.com/grokify/ringcentral-sdk-ruby
+* https://github.com/grokify/sumologic-sdk-ruby
 
 Sumo Logic API Documentation
 
