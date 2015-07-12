@@ -9,14 +9,21 @@ Sumo Logic Ruby SDK
 
 Ruby interface to the Sumo Logic REST API.
 
-Please add your scripts and programs to the `scripts` folder.
-
 ## Usage
 
-The interface for this SDK is still being built out but follows the structure in the 
+The interface for this SDK is still being built out to follow the structure in the 
 [Sumo Logic Python SDK](https://github.com/SumoLogic/sumologic-python-sdk).
 
-Exampe scripts are located in the `scripts` directory of the [GitHub repo](https://github.com/grokify/sumologic-sdk-ruby).
+The following methods are currently implemented:
+
+* `search(query [, from, to, time_zone])`
+* `search_job(query [, from, to, time_zone])`
+* `search_job_records({'id' => 'search_job_id'}, limit, offset)`
+* `search_job_status({'id' => 'search_job_id'})`
+
+Note, for the search methods, the query parameter can be exactly the same query that is entered into the Sumo Logic web console.
+
+Example scripts are located in the `scripts` directory of the [GitHub repo](https://github.com/grokify/sumologic-sdk-ruby).
 
 ## More Info
 
@@ -24,6 +31,8 @@ Exampe scripts are located in the `scripts` directory of the [GitHub repo](https
 2. [Sumo Logic Python SDK](https://github.com/SumoLogic/sumologic-python-sdk)
 
 ## Contributions
+
+Please add your scripts and programs to the `scripts` folder.
 
 Any reports of problems, comments or suggestions are most welcome.
 

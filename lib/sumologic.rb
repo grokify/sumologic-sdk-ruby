@@ -9,12 +9,12 @@ module SumoLogic
 
   class Client
 
-    def initialize(accessId=nil, accessKey=nil, endpoint=SumoLogic::URL)
+    def initialize(access_id=nil, access_key=nil, endpoint=SumoLogic::URL)
       @endpoint = endpoint
       @session  = Faraday
       headers   = {'Content-Type' => 'application/json', 'Accept' => 'application/json'}
       @session  = Faraday.new(:url => @endpoint, :headers => headers) do |conn|
-        conn.basic_auth(accessId, accessKey)
+        conn.basic_auth(access_id, access_key)
         conn.use      :cookie_jar
         conn.request  :json
         conn.response :json, :content_type => 'application/json'
@@ -22,8 +22,16 @@ module SumoLogic
       end
     end
 
-    def search_job(query, fromTime=nil, toTime=nil, timeZone='UTC')
-      params = {:query => query, :from => fromTime, :to => toTime, :timeZone => timeZone}
+    def search(query, from_time=nil, to_time=nil, time_zone='UTC')
+      params = {:q => query, :from => from_time, :to => to_time, :tz => time_zone}
+      r = @session.get do |req|
+        req.url 'logs/search'
+        req.params = params
+      end    
+    end
+
+    def search_job(query, from_time=nil, to_time=nil, time_zone='UTC')
+      params = {:query => query, :from => from_time, :to => to_time, :timeZone => time_zone}
       r = @session.post do |req|
         req.url 'search/jobs'
         req.body = MultiJson.encode(params)
