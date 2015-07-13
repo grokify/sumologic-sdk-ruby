@@ -49,6 +49,6 @@ Please report these on [Github](https://github.com/grokify/sumologic-sdk-ruby)
 
 ## License
 
-RingCentral SDK is available under an MIT-style license. See {file:LICENSE.txt} for details.
+Sumo Logic Ruby SDK is available under an MIT-style license. See {file:LICENSE.txt} for details.
 
-RingCentral SDK &copy; 2015 by John Wang
+Sumo Logic Ruby SDK &copy; 2015 by John Wang
