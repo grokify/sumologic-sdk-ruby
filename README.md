@@ -25,6 +25,10 @@ Note, for the search methods, the query parameter can be exactly the same query 
 
 Example scripts are located in the `scripts` directory of the [GitHub repo](https://github.com/grokify/sumologic-sdk-ruby).
 
+## Change Log
+
+See [CHANGELOG.md](CHANGELOG.md).
+
 ## Links
 
 Project Repo
@@ -49,6 +53,6 @@ Please report these on [Github](https://github.com/grokify/sumologic-sdk-ruby)
 
 ## License
 
-Sumo Logic Ruby SDK is available under an MIT-style license. See {file:LICENSE.txt} for details.
+Sumo Logic Ruby SDK is available under an MIT-style license. See [LICENSE.txt](LICENSE.txt) for details.
 
 Sumo Logic Ruby SDK &copy; 2015 by John Wang

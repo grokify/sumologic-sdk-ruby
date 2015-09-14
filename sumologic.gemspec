@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'sumologic'
-  s.version     = '0.0.2'
-  s.date        = '2015-07-12'
+  s.version     = '0.0.3'
+  s.date        = '2015-09-14'
   s.summary     = 'Sumo Logic SDK - Unofficial Ruby SDK for the Sumo Logic REST API'
   s.description = 'An unofficial Ruby SDK for the Sumo Logic REST API'
   s.authors     = ['John Wang']
