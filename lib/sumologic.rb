@@ -75,34 +75,6 @@ module SumoLogic
       return r.body.has_key?('dashboardMonitorDatas') ? r.body['dashboardMonitorDatas'] : nil
     end
 
-=begin
-
-      r = @session.get '/dashboards', params
-        return json.loads(r.text)['dashboards']
-
-    def dashboard(self, dashboard_id):
-        r = self.get('/dashboards/' + str(dashboard_id))
-        return json.loads(r.text)['dashboard']
-
-    def dashboard_data(self, dashboard_id):
-        r = self.get('/dashboards/' + str(dashboard_id) + '/data')
-        return json.loads(r.text)['dashboardMonitorDatas']
-
-
-    def dashboards(self, monitors=False):
-        params = {'monitors': monitors}
-        r = self.get('/dashboards', params)
-        return json.loads(r.text)['dashboards']
-
-    def dashboard(self, dashboard_id):
-        r = self.get('/dashboards/' + str(dashboard_id))
-        return json.loads(r.text)['dashboard']
-
-    def dashboard_data(self, dashboard_id):
-        r = self.get('/dashboards/' + str(dashboard_id) + '/data')
-        return json.loads(r.text)['dashboardMonitorDatas']
-
-=end
   end
 
 end

@@ -17,10 +17,25 @@ The interface for this SDK is still being built out to follow the structure in t
 
 The following methods are currently implemented:
 
-* `search(query [, from, to, time_zone])`
-* `search_job(query [, from, to, time_zone])`
-* `search_job_records({'id' => search_job_id}, limit, offset)`
-* `search_job_status( {'id' => search_job_id})`
+```ruby
+sumo = SumoLogic::Client.new(access_id, access_key)
+
+# Search
+r = sumo.search(query [, from, to, time_zone])
+
+r = sumo.search_job(query [, from, to, time_zone])
+
+r = sumo.search_job_records({'id' => search_job_id}, limit, offset)
+
+r = sumo.search_job_status( {'id' => search_job_id})
+
+# Dashboards
+r = sumo.dashboards()
+
+r = sumo.dashboard(dashboard_id)
+
+r = sumo.dashboard_data(dashboard_id)
+```
 
 Note, for the search methods, the query parameter can be exactly the same query that is entered into the Sumo Logic web console.
 
