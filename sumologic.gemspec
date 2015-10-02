@@ -1,12 +1,14 @@
+require File.expand_path('../lib/sumologic/version', __FILE__)
+
 Gem::Specification.new do |s|
   s.name        = 'sumologic'
-  s.version     = '0.0.3'
-  s.date        = '2015-09-14'
+  s.version     = SumoLogic::VERSION
+  s.date        = '2015-10-02'
   s.summary     = 'Sumo Logic SDK - Unofficial Ruby SDK for the Sumo Logic REST API'
   s.description = 'An unofficial Ruby SDK for the Sumo Logic REST API'
   s.authors     = ['John Wang']
   s.email       = 'johncwang@gmail.com'
-  s.homepage    = 'https://github.com/grokify/'
+  s.homepage    = 'https://github.com/grokify/sumologic-sdk-ruby'
   s.files       = [
     'CHANGELOG.md',
     'LICENSE.txt',
@@ -14,6 +16,7 @@ Gem::Specification.new do |s|
     'Rakefile',
     'VERSION.txt',
     'lib/sumologic.rb',
+    'lib/sumologic/version.rb',
     'test/test_helper.rb',
     'test/test_setup.rb'
   ]

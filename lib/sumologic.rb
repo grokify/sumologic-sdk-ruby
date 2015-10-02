@@ -52,6 +52,57 @@ module SumoLogic
       end
     end
 
+    def dashboards(monitors=false)
+      params = {:dashboards => monitors}
+      r = @session.get do |req|
+        req.url 'dashboards'
+        req.params = params
+      end
+      return r.body.has_key?('dashboards') ? r.body['dashboards'] : nil
+    end
+
+    def dashboard(dashboard_id)
+      r = @session.get do |req|
+        req.url 'dashboards/' + dashboard_id.to_s
+      end
+      return r.body.has_key?('dashboard') ? r.body['dashboard'] : nil
+    end
+
+    def dashboard_data(dashboard_id)
+      r = @session.get do |req|
+        req.url 'dashboards/' + dashboard_id.to_s + '/data'
+      end
+      return r.body.has_key?('dashboardMonitorDatas') ? r.body['dashboardMonitorDatas'] : nil
+    end
+
+=begin
+
+      r = @session.get '/dashboards', params
+        return json.loads(r.text)['dashboards']
+
+    def dashboard(self, dashboard_id):
+        r = self.get('/dashboards/' + str(dashboard_id))
+        return json.loads(r.text)['dashboard']
+
+    def dashboard_data(self, dashboard_id):
+        r = self.get('/dashboards/' + str(dashboard_id) + '/data')
+        return json.loads(r.text)['dashboardMonitorDatas']
+
+
+    def dashboards(self, monitors=False):
+        params = {'monitors': monitors}
+        r = self.get('/dashboards', params)
+        return json.loads(r.text)['dashboards']
+
+    def dashboard(self, dashboard_id):
+        r = self.get('/dashboards/' + str(dashboard_id))
+        return json.loads(r.text)['dashboard']
+
+    def dashboard_data(self, dashboard_id):
+        r = self.get('/dashboards/' + str(dashboard_id) + '/data')
+        return json.loads(r.text)['dashboardMonitorDatas']
+
+=end
   end
 
 end

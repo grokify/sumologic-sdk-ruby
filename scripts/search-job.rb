@@ -11,8 +11,8 @@ options = {:query => ''}
 OptionParser.new do |opts|
   opts.banner = "Usage: search-job.rb [options]"
 
-  opts.on('-u', '--username ACCESS_ID/USERNAME' , 'Access Id / Username')  { |v| options[:access_id]  = v }
-  opts.on('-p', '--password ACCESS_KEY/PASSWORD', 'Access Key / Password') { |v| options[:access_key] = v }
+  opts.on('-i', '--id ACCESS_ID/USERNAME' , 'Access Id / Username')  { |v| options[:access_id]  = v }
+  opts.on('-k', '--key ACCESS_KEY/PASSWORD', 'Access Key / Password') { |v| options[:access_key] = v }
   opts.on('-q', '--query QUERY', 'Query')    { |v| options[:query] = v ? v : '' }
   opts.on('-v', '--verbose BOOL', 'Verbose') { |v| options[:verbose] = v ? true : false }
   opts.on('-o', '--output OUTPUT_PATH', 'Output Path') { |v| options[:output_path] = v ? v : '/tmp/sumo_api_output.json' }
