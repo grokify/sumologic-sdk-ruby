@@ -1,11 +1,14 @@
 CHANGELOG
 ---------
+-- **2015-10-02**: 0.0.4
+  - Add dashboard support: `dashboards`, `dashboard`, and `dashboard_data`
 - **2015-09-14**: 0.0.3
   - Add Scrutinizer support
   - Update `README.md`
 - **2015-07-11**: 0.0.2
-  - Add single shot search() method
+  - Add single shot search support: `search`
   - Add Travis CI support
   - Add Code Climate support
 - **2015-06-09**: 0.0.1
   - Initial commit
+  - Add search job support: `search_job`, `search_job_status`, `search_job_records`
