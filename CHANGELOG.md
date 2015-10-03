@@ -1,6 +1,6 @@
 CHANGELOG
 ---------
--- **2015-10-02**: 0.0.4
+- **2015-10-02**: 0.0.4
   - Add dashboard support: `dashboards`, `dashboard`, and `dashboard_data`
 - **2015-09-14**: 0.0.3
   - Add Scrutinizer support
