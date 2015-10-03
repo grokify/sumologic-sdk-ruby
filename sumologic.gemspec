@@ -4,8 +4,8 @@ Gem::Specification.new do |s|
   s.name        = 'sumologic'
   s.version     = SumoLogic::VERSION
   s.date        = '2015-10-02'
-  s.summary     = 'Sumo Logic SDK - Unofficial Ruby SDK for the Sumo Logic REST API'
-  s.description = 'An unofficial Ruby SDK for the Sumo Logic REST API'
+  s.summary     = 'Ruby Sumo Logic SDK for the Sumo Logic REST API'
+  s.description = 'Ruby Sumo Logic SDK for the Sumo Logic REST API'
   s.authors     = ['John Wang']
   s.email       = 'johncwang@gmail.com'
   s.homepage    = 'https://github.com/grokify/sumologic-sdk-ruby'
