@@ -1,11 +1,40 @@
 sudo: false
 cache: bundler
 language: ruby
+
 rvm:
-  - 1.8.7
-  - 1.9.3
-  - 2.0.0
-  - 2.1.0
-  - 2.1.6
+  - 2.3.0
+  - 2.2.4
   - 2.2.0
-  - 2.2.2
+  - 2.1.8
+  - 2.1.0
+  - 2.0.0-p648
+  - 2.0.0
+  - 1.9.3
+  - 1.8.7
+  - ruby
+  - ruby-head
+  - jruby
+  - jruby-19mode
+  - jruby-head
+  - rbx-2
+  - rbx-head
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - rvm: 1.8.7
+    - rvm: ruby-head
+    - rvm: jruby
+    - rvm: jruby-19mode
+    - rvm: jruby-head
+    - rvm: rbx-head
+
+notifications:
+  email:
+    recipients:
+      - johncwang@gmail.com
+    on_success: always
+    on_failure: always
+  webhooks:
+    - https://zapier.com/hooks/catch/2y1h4a/
