@@ -3,7 +3,7 @@ require File.expand_path('../lib/sumologic/version', __FILE__)
 Gem::Specification.new do |s|
   s.name        = 'sumologic'
   s.version     = SumoLogic::VERSION
-  s.date        = '2015-10-02'
+  s.date        = '2016-01-14'
   s.summary     = 'Ruby Sumo Logic SDK for the Sumo Logic REST API'
   s.description = 'Ruby Sumo Logic SDK for the Sumo Logic REST API'
   s.authors     = ['John Wang']
