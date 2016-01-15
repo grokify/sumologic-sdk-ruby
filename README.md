@@ -5,6 +5,7 @@ Sumo Logic Ruby SDK
 [![Build Status](https://img.shields.io/travis/grokify/sumologic-sdk-ruby/master.svg)](https://travis-ci.org/grokify/sumologic-sdk-ruby)
 [![Code Climate](https://codeclimate.com/github/grokify/sumologic-sdk-ruby/badges/gpa.svg)](https://codeclimate.com/github/grokify/sumologic-sdk-ruby)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/grokify/sumologic-sdk-ruby/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/grokify/sumologic-sdk-ruby/?branch=master)
+[![Downloads][downloads-svg]][downloads-link]
 [![Docs](https://img.shields.io/badge/docs-rubydoc-blue.svg)](http://www.rubydoc.info/gems/sumologic/)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/grokify/sumologic-sdk-ruby/master/LICENSE.txt)
 
@@ -72,3 +73,6 @@ Please report these on [Github](https://github.com/grokify/sumologic-sdk-ruby)
 Sumo Logic Ruby SDK is available under an MIT-style license. See [LICENSE.txt](LICENSE.txt) for details.
 
 Sumo Logic Ruby SDK &copy; 2015-2016 by John Wang
+
+ [downloads-svg]: http://ruby-gem-downloads-badge.herokuapp.com/sumologic
+ [downloads-link]: https://rubygems.org/gems/sumologic
