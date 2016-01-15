@@ -1,37 +1,36 @@
 sudo: false
 cache: bundler
 language: ruby
-
 rvm:
-  - 2.3.0
-  - 2.2.4
-  - 2.2.0
-  - 2.1.8
-  - 2.1.0
-  - 2.0.0-p648
-  - 2.0.0
-  - 1.9.3
-  - 1.8.7
-  - ruby
-  - ruby-head
-  - jruby
-  - jruby-19mode
-  - jruby-head
-  - rbx-2
-  - rbx-head
-
+- 2.3.0
+- 2.2.4
+- 2.2.0
+- 2.1.8
+- 2.1.0
+- 2.0.0-p648
+- 2.0.0
+- 1.9.3
+- 1.8.7
+- ruby
+- ruby-head
+- jruby
+- jruby-19mode
+- jruby-head
+- rbx-2
+- rbx-head
 matrix:
   fast_finish: true
   allow_failures:
-    - rvm: ruby-head
-    - rvm: jruby-head
-    - rvm: rbx-head
-
+  - rvm: ruby-head
+  - rvm: jruby-head
+  - rvm: rbx-head
 notifications:
   email:
     recipients:
-      - johncwang@gmail.com
+    - johncwang@gmail.com
     on_success: always
     on_failure: always
   webhooks:
-    - https://zapier.com/hooks/catch/2y1h4a/
+  - https://zapier.com/hooks/catch/2y1h4a/
+  slack:
+    secure: BC2FDnfcZYONwJPvMGu9Dt5arlbBuSnS5055XpuQ12sFlq4oF3B9pBJ9dDD9CdKP9rBdPqcclBiHAVh5XbjCHWsyjfG+hpO83bibaPjNqmvVJy3UzJJncf+uQ50AFqjarX3d/ov2D72n/YA0HhnTadUZp3jv98d/BoFyQiv08BiUsQiZTdP+3tjXHMPsM+RrwT27HJhQvop+7/SW/kg1ICAVGJ6BhXpZgWoR7SMDk/+UEUNJ2cfcCUysCnDuUmHOA+b89Gh2GaRVUCWUJ7aoIuK5pqp/MIwtvT1+n/Wf3pxJcWOLeq2SuTWvKa6IYFFV2Dw4TaKaOBs+M4u7VQJBO653NJjHuTgqJv6+s1MH26v8ywx/lT7Oq1uLPUgtpp7TL0QCVGxvQMykhbbdwOxbYy6nTOrMt5IQx0JHs+CFPRGJoNircts7YcRN1SSjp7J4NBOocmX+cz+iHuVDBdyQqpcaGMzZcyNe4dPFFkGAhm46li3XwtvWHlSv2yF1MOvI8KrYxboyM/TKuFc6jPwQwwTRkQ+1Gc7t1821XLA1Z/ItugjlG0vzn5wfoyoTBB+TK1VC5Uj6IrpDQQgrEAabmQ7+ACqANmRawox2YAPrKtMdROB3g7L9ts0LUkLSfLENRAwso4YhfVDE5q1Mn/Xbh0xvS0CGN+MClc9JeJFHycc=
