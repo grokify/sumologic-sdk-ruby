@@ -27,7 +27,7 @@ matrix:
 notifications:
   email:
     recipients:
-    - johncwang@gmail.com
+      - secure: F3DpsbyaAx4e8phyQo2fdLGa5L3Gu5YU5WJ1iPHmDWonMOvhchilLrnJADHridVpssxLy3WQVkXWiiBDcnjVu/NuOdf+lPJbbgFesbc/bbINXfeWtE4ZfTdhy9XvZia9PnoVB8VXQwUrKvwOivn3U4IAvHvzmVTPPVzNNBd0eQU7UJv7Dl4uDPWvvj1o7XUexoo1uG+GuS/fiN15GFFZ8h5Ng9P6sNIChwKR6zmssL8U+cwRTF0CcDENEDIsiiLGiyad1odB6eiFlZZpUoUuDhEQ4blvmDkSmSt3oyxXMQcqNkY0Wwmc2eHdk02IdVaDCFVSzrn17iaLlbM+5RRYbDlBNq2bByu+APhjZghvbBy0+zfuD/oFJCdLX+umQHvNaz/a0DKUmtZCv4BgPOMx+bXRz+1iwjdHhOzIGDmHaGUktwxm/8RECSawN/36BBOg1ohyNEFHjUfF48NDIOF04R6iQsedf0K7mkQnzg0aA1NDp1c99HTFLzWvcUDs/eJC129mucLyh5ZEFHC9rGlwkZqH8EN5HMbqVMk2C/YSYQloEi7E9rWwbU+Vl/alLbKufah3BS2YXazcTHlGGKo6U5QPL+DYAmG++Dyay/luL4N+s0Y+BI0jet19alGtQcH2bJaOFVC7B9S9+XnkHBUsNCvgvgHenhjuvUN4c9llNbo=
     on_success: always
     on_failure: always
   webhooks:
