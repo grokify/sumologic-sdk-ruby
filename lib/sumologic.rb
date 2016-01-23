@@ -4,7 +4,6 @@ require 'faraday-cookie_jar'
 require 'multi_json'
 
 module SumoLogic
-
   URL = 'https://api.sumologic.com/api/v1'
 
   class Client
@@ -76,5 +75,4 @@ module SumoLogic
     end
 
   end
-
 end

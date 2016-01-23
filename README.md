@@ -1,13 +1,14 @@
 Sumo Logic Ruby SDK
 ===================
 
-[![Gem Version](https://badge.fury.io/rb/sumologic.svg)](http://badge.fury.io/rb/sumologic)
-[![Build Status](https://img.shields.io/travis/grokify/sumologic-sdk-ruby/master.svg)](https://travis-ci.org/grokify/sumologic-sdk-ruby)
-[![Code Climate](https://codeclimate.com/github/grokify/sumologic-sdk-ruby/badges/gpa.svg)](https://codeclimate.com/github/grokify/sumologic-sdk-ruby)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/grokify/sumologic-sdk-ruby/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/grokify/sumologic-sdk-ruby/?branch=master)
+[![Gem Version][gem-version-svg]][gem-version-link]
+[![Build Status][build-status-svg]][build-status-link]
+[![Dependency Status][dependency-status-svg]][dependency-status-link]
+[![Code Climate][codeclimate-status-svg]][codeclimate-status-link]
+[![Scrutinizer Code Quality][scrutinizer-status-svg]][scrutinizer-status-link]
 [![Downloads][downloads-svg]][downloads-link]
-[![Docs](https://img.shields.io/badge/docs-rubydoc-blue.svg)](http://www.rubydoc.info/gems/sumologic/)
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/grokify/sumologic-sdk-ruby/master/LICENSE.txt)
+[![Docs][docs-rubydoc-svg]][docs-rubydoc-link]
+[![License][license-svg]][license-link]
 
 Ruby interface to the Sumo Logic REST API.
 
@@ -74,5 +75,19 @@ Sumo Logic Ruby SDK is available under an MIT-style license. See [LICENSE.txt](L
 
 Sumo Logic Ruby SDK &copy; 2015-2016 by John Wang
 
+ [gem-version-svg]: https://badge.fury.io/rb/sumologic.svg
+ [gem-version-link]: http://badge.fury.io/rb/sumologic
  [downloads-svg]: http://ruby-gem-downloads-badge.herokuapp.com/sumologic
  [downloads-link]: https://rubygems.org/gems/sumologic
+ [build-status-svg]: https://api.travis-ci.org/grokify/sumologic-sdk-ruby.svg?branch=master
+ [build-status-link]: https://travis-ci.org/grokify/sumologic-sdk-ruby
+ [dependency-status-svg]: https://gemnasium.com/grokify/sumologic-sdk-ruby.svg
+ [dependency-status-link]: https://gemnasium.com/grokify/sumologic-sdk-ruby
+ [codeclimate-status-svg]: https://codeclimate.com/github/grokify/sumologic-sdk-ruby/badges/gpa.svg
+ [codeclimate-status-link]: https://codeclimate.com/github/grokify/sumologic-sdk-ruby
+ [scrutinizer-status-svg]: https://scrutinizer-ci.com/g/grokify/sumologic-sdk-ruby/badges/quality-score.png?b=master
+ [scrutinizer-status-link]: https://scrutinizer-ci.com/g/grokify/sumologic-sdk-ruby/?branch=master
+ [docs-rubydoc-svg]: https://img.shields.io/badge/docs-rubydoc-blue.svg
+ [docs-rubydoc-link]: http://www.rubydoc.info/gems/sumologic/
+ [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
+ [license-link]: https://github.com/grokify/sumologic-sdk-ruby/blob/master/LICENSE.txt
