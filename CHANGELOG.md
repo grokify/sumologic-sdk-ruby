@@ -1,5 +1,7 @@
 CHANGELOG
 ---------
+- **2016-02-05**: 0.0.5
+  - Update to Ruby 1.9 hash syntax
 - **2015-10-02**: 0.0.4
   - Add dashboard support: `dashboards`, `dashboard`, and `dashboard_data`
 - **2015-09-14**: 0.0.3
@@ -12,3 +14,4 @@ CHANGELOG
 - **2015-06-09**: 0.0.1
   - Initial commit
   - Add search job support: `search_job`, `search_job_status`, `search_job_records`
+
