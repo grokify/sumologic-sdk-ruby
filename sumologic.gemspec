@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
     'test/test_helper.rb',
     'test/test_setup.rb'
   ]
-  s.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  s.test_files    = s.files.grep(%r{^(test|spec|features)/})
   s.require_paths = ['lib']
 
   # s.required_ruby_version = '>= 1.8.7' # 1.8.7+ is tested
