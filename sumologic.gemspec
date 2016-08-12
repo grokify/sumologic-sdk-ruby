@@ -18,7 +18,6 @@ Gem::Specification.new do |s|
     'LICENSE.txt',
     'README.md',
     'Rakefile',
-    'VERSION.txt',
     'lib/sumologic.rb',
     'test/test_helper.rb',
     'test/test_setup.rb'
