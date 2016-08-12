@@ -1,8 +1,11 @@
-require File.expand_path('../lib/sumologic/version', __FILE__)
+lib = 'sumologic'
+lib_file = File.expand_path("../lib/#{lib}.rb", __FILE__)
+File.read(lib_file) =~ /\bVERSION\s*=\s*["'](.+?)["']/
+version = $1
 
 Gem::Specification.new do |s|
-  s.name        = 'sumologic'
-  s.version     = SumoLogic::VERSION
+  s.name        = lib
+  s.version     = version
   s.date        = '2016-01-14'
   s.summary     = 'Ruby Sumo Logic SDK for the Sumo Logic REST API'
   s.description = 'Ruby Sumo Logic SDK for the Sumo Logic REST API'
@@ -26,5 +29,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'faraday_middleware', '~> 0', '>= 0'
   s.add_dependency 'faraday-cookie_jar', '>= 0'
   s.add_dependency 'multi_json', '>= 0'
-  s.add_dependency 'test-unit', '>= 0'
+
+  s.add_development_dependency 'coveralls'
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'simplecov'
+  s.add_development_dependency 'test-unit', '>= 0'
 end
