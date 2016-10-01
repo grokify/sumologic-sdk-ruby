@@ -23,22 +23,22 @@ The following methods are currently implemented:
 sumo = SumoLogic::Client.new access_id, access_key
 
 # Search
-r = sumo.search query [, from, to, time_zone]
+r = sumo.search(query [, from, to, time_zone])
 
-r = sumo.search_job query [, from, to, time_zone]
+r = sumo.search_job(query [, from, to, time_zone])
 
-r = sumo.search_job_messages {'id' => search_job_id}, limit, offset
+r = sumo.search_job_messages({'id' => search_job_id}, limit, offset)
 
-r = sumo.search_job_records {'id' => search_job_id}, limit, offset
+r = sumo.search_job_records({'id' => search_job_id}, limit, offset)
 
-r = sumo.search_job_status {'id' => search_job_id}
+r = sumo.search_job_status({'id' => search_job_id})
 
 # Dashboards
 r = sumo.dashboards
 
-r = sumo.dashboard dashboard_id
+r = sumo.dashboard(dashboard_id)
 
-r = sumo.dashboard_data dashboard_id
+r = sumo.dashboard_data(dashboard_id)
 ```
 
 Note, for the search methods, the query parameter can be exactly the same query that is entered into the Sumo Logic web console.
