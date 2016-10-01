@@ -40,22 +40,22 @@ module SumoLogic
 
     def search_job_status(search_job={})
       r = @session.get do |req|
-        req.url 'search/jobs/' + search_job['id'].to_s
-      end
-    end
-    
-    def search_job_records(search_job, limit=nil, offset=0)
-      params = {limit: limit, offset: offset}
-      r = @session.get do |req|
-        req.url 'search/jobs/' + search_job['id'].to_s + '/records'
-        req.params = params
+        req.url "search/jobs/#{search_job['id']}"
       end
     end
 
     def search_job_messages(search_job, limit=nil, offset=0)
-      params = {:limit => limit, :offset => offset}
+      params = {limit: limit, offset: offset}
       r = @session.get do |req|
         req.url "search/jobs/#{search_job['id']}/messages"
+        req.params = params
+      end
+    end
+
+    def search_job_records(search_job, limit=nil, offset=0)
+      params = {limit: limit, offset: offset}
+      r = @session.get do |req|
+        req.url "search/jobs/#{search_job['id']}/records"
         req.params = params
       end
     end
@@ -71,14 +71,14 @@ module SumoLogic
 
     def dashboard(dashboard_id)
       r = @session.get do |req|
-        req.url 'dashboards/' + dashboard_id.to_s
+        req.url "dashboards/#{dashboard_id}"
       end
       return r.body.has_key?('dashboard') ? r.body['dashboard'] : nil
     end
 
     def dashboard_data(dashboard_id)
       r = @session.get do |req|
-        req.url 'dashboards/' + dashboard_id.to_s + '/data'
+        req.url "dashboards/#{dashboard_id}/data"
       end
       return r.body.has_key?('dashboardMonitorDatas') ? r.body['dashboardMonitorDatas'] : nil
     end
