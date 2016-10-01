@@ -9,6 +9,8 @@ Sumo Logic Ruby SDK
 [![Docs][docs-rubydoc-svg]][docs-rubydoc-link]
 [![License][license-svg]][license-link]
 
+[![Stories in Ready][story-status-svg]][story-status-link]
+
 Ruby interface to the Sumo Logic REST API.
 
 ## Usage
@@ -86,6 +88,8 @@ Sumo Logic Ruby SDK &copy; 2015-2016 by John Wang
  [codeclimate-status-link]: https://codeclimate.com/github/grokify/sumologic-sdk-ruby
  [scrutinizer-status-svg]: https://scrutinizer-ci.com/g/grokify/sumologic-sdk-ruby/badges/quality-score.png?b=master
  [scrutinizer-status-link]: https://scrutinizer-ci.com/g/grokify/sumologic-sdk-ruby/?branch=master
+ [story-status-svg]: https://badge.waffle.io/grokify/sumologic-sdk-ruby.svg?label=ready&title=Ready
+ [story-status-link]: https://waffle.io/grokify/sumologic-sdk-ruby
  [docs-rubydoc-svg]: https://img.shields.io/badge/docs-rubydoc-blue.svg
  [docs-rubydoc-link]: http://www.rubydoc.info/gems/sumologic/
  [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg

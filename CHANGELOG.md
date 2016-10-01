@@ -5,6 +5,9 @@ CHANGELOG
   - Add `collectors`, `collector`, `update_collector`, `delete_collector` methods
   - Add `sources`, `source`, `update_source`, `delete_source` methods
   - Add `create_content`, `get_content`, `delete_content` methods
+  - Add redirect support
+  - Add accessor for Faraday HTTP client
+  - Add Waffle.io project and shield
 - **0.0.5** - 2016-02-05
   - Update to Ruby 1.9 hash syntax
   - Remove `version.rb` file

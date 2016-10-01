@@ -8,13 +8,14 @@ module SumoLogic
   URL = 'https://api.sumologic.com/api/v1'
 
   class Client
+    attr_accessor :http
 
     def initialize(access_id=nil, access_key=nil, endpoint=SumoLogic::URL)
       @endpoint = endpoint
-      @session  = Faraday
-      headers   = {'Content-Type' => 'application/json', 'Accept' => 'application/json'}
-      @session  = Faraday.new(url: @endpoint, headers: headers) do |conn|
+      headers = {'Content-Type' => 'application/json', 'Accept' => 'application/json'}
+      @http = Faraday.new(url: @endpoint, headers: headers) do |conn|
         conn.basic_auth(access_id, access_key)
+        conn.use      FaradayMiddleware::FollowRedirects, limit: 5
         conn.use      :cookie_jar
         conn.request  :json
         conn.response :json, content_type: 'application/json'
@@ -23,7 +24,7 @@ module SumoLogic
     end
 
     def search(query, from_time=nil, to_time=nil, time_zone='UTC')
-      @session.get do |req|
+      @http.get do |req|
         req.url 'logs/search'
         req.params = {q: query, from: from_time, to: to_time, tz: time_zone}
       end    
@@ -31,36 +32,36 @@ module SumoLogic
 
     def search_job(query, from_time=nil, to_time=nil, time_zone='UTC')
       params = {query: query, from: from_time, to: to_time, timeZone: time_zone}
-      @session.post do |req|
+      @http.post do |req|
         req.url 'search/jobs'
         req.body = MultiJson.encode(params)
       end
     end
 
     def search_job_status(search_job={})
-      @session.get "search/jobs/#{search_job['id']}"
+      @http.get "search/jobs/#{search_job['id']}"
     end
 
     def search_job_messages(search_job, limit=nil, offset=0)
       params = {limit: limit, offset: offset}
-      @session.get "search/jobs/#{search_job['id']}/messages", params
+      @http.get "search/jobs/#{search_job['id']}/messages", params
     end
 
     def search_job_records(search_job, limit=nil, offset=0)
       params = {limit: limit, offset: offset}
-      @session.get "search/jobs/#{search_job['id']}/records", params
+      @http.get "search/jobs/#{search_job['id']}/records", params
     end
 
     def collectors(limit=nil, offset=nil)
-      @session.get 'collectors', {limit: limit, offset: offset}
+      @http.get 'collectors', {limit: limit, offset: offset}
     end
 
     def collector(collector_id)
-      @session.get "collectors/#{collector_id}"
+      @http.get "collectors/#{collector_id}"
     end
 
     def update_collector(collector, etag)
-      @session.put do |req|
+      @http.put do |req|
         req.url "collectors/#{collector['collector']['id']}"
         req.headers['If-Match'] = etag
         req.body = collector
@@ -68,20 +69,20 @@ module SumoLogic
     end
 
     def delete_collector(collector)
-      @session.delete "collectors/#{collector['id']}"
+      @http.delete "collectors/#{collector['id']}"
     end
 
     def sources(collector_id, limit=nil, offset=nil)
       params = {limit: limit, offset: offset}
-      @session.get "collectors/#{collector_id}", params
+      @http.get "collectors/#{collector_id}", params
     end
 
     def source(collector_id, source_id)
-      @session.get "collectors/#{collector_id}/sources/#{source_id}"
+      @http.get "collectors/#{collector_id}/sources/#{source_id}"
     end
 
     def update_source(collector_id, source, etag)
-      @session.put do |req|
+      @http.put do |req|
         req.url "collectors/#{collector_id}/sources/#{source['source']['id']}"
         req.headers['If-Match'] = etag
         req.body = source
@@ -89,34 +90,34 @@ module SumoLogic
     end
 
     def delete_source(collector_id, source)
-      @session.delete "collectors/#{collector_id}/sources/#{source['source']['id']}"
+      @http.delete "collectors/#{collector_id}/sources/#{source['source']['id']}"
     end
 
     def create_content(path, data)
-      @session.post "content/#{path}", data
+      @http.post "content/#{path}", data
     end
 
     def get_content(path)
-      @session.get "content/#{path}"
+      @http.get "content/#{path}"
     end
 
     def delete_content(path)
-      @session.delete "content/#{path}"
+      @http.delete "content/#{path}"
     end
 
     def dashboards(monitors=false)
-      r = @session.get 'dashboards', {dashboards: monitors}
-      return r.body.has_key?('dashboards') ? r.body['dashboards'] : nil
+      r = @http.get 'dashboards', {dashboards: monitors}
+      return r.body.key?('dashboards') ? r.body['dashboards'] : nil
     end
 
     def dashboard(dashboard_id)
-      r = @session.get "dashboards/#{dashboard_id}"
-      return r.body.has_key?('dashboard') ? r.body['dashboard'] : nil
+      r = @http.get "dashboards/#{dashboard_id}"
+      return r.body.key?('dashboard') ? r.body['dashboard'] : nil
     end
 
     def dashboard_data(dashboard_id)
-      r = @session.get "dashboards/#{dashboard_id}/data"
-      return r.body.has_key?('dashboardMonitorDatas') ? r.body['dashboardMonitorDatas'] : nil
+      r = @http.get "dashboards/#{dashboard_id}/data"
+      return r.body.key?('dashboardMonitorDatas') ? r.body['dashboardMonitorDatas'] : nil
     end
 
   end
