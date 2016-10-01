@@ -13,8 +13,7 @@ Ruby interface to the Sumo Logic REST API.
 
 ## Usage
 
-The interface for this SDK is still being built out to follow the structure in the 
-[Sumo Logic Python SDK](https://github.com/SumoLogic/sumologic-python-sdk).
+The Ruby SDK ported from the [Sumo Logic Python SDK](https://github.com/SumoLogic/sumologic-python-sdk).
 
 The following methods are currently implemented:
 
