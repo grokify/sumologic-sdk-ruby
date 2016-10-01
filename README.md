@@ -26,6 +26,8 @@ r = sumo.search(query [, from, to, time_zone])
 
 r = sumo.search_job(query [, from, to, time_zone])
 
+r = sumo.search_job_messages({'id' => search_job_id}, limit, offset)
+
 r = sumo.search_job_records({'id' => search_job_id}, limit, offset)
 
 r = sumo.search_job_status( {'id' => search_job_id})
