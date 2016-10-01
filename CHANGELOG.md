@@ -1,17 +1,22 @@
 CHANGELOG
 ---------
-- **2016-02-05**: 0.0.5
+- **0.1.0** - 2016-09-30
+  - Add `search_job_messages` method
+  - Add `collectors`, `collector`, `update_collector`, `delete_collector` methods
+  - Add `sources`, `source`, `update_source`, `delete_source` methods
+  - Add `create_content`, `get_content`, `delete_content` methods
+- **0.0.5** - 2016-02-05
   - Update to Ruby 1.9 hash syntax
   - Remove `version.rb` file
-- **2015-10-02**: 0.0.4
+- **0.0.4** - 2015-10-02
   - Add dashboard support: `dashboards`, `dashboard`, and `dashboard_data`
-- **2015-09-14**: 0.0.3
+- **0.0.3** - 2015-09-14
   - Add Scrutinizer support
   - Update `README.md`
-- **2015-07-11**: 0.0.2
+- **0.0.2** - 2015-07-11
   - Add single shot search support: `search`
   - Add Travis CI support
   - Add Code Climate support
-- **2015-06-09**: 0.0.1
+- **0.0.1** - 2015-06-09
   - Initial commit
   - Add search job support: `search_job`, `search_job_status`, `search_job_records`

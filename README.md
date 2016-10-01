@@ -54,6 +54,7 @@ Project Repo
 
 Sumo Logic API Documentation
 
+* https://help.sumologic.com/APIs
 * https://github.com/SumoLogic/sumo-api-doc/wiki
 
 Sumo Logic Python SDK

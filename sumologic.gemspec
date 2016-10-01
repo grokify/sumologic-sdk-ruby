@@ -6,9 +6,8 @@ version = $1
 Gem::Specification.new do |s|
   s.name        = lib
   s.version     = version
-  s.date        = '2016-08-11'
+  s.date        = '2016-09-30'
   s.summary     = 'Ruby Sumo Logic SDK for the Sumo Logic REST API'
-  s.description = 'Ruby Sumo Logic SDK for the Sumo Logic REST API'
   s.authors     = ['John Wang']
   s.email       = 'johncwang@gmail.com'
   s.homepage    = 'https://github.com/grokify/sumologic-sdk-ruby'
@@ -24,16 +23,14 @@ Gem::Specification.new do |s|
   ]
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
   s.require_paths = ['lib']
-
-  # s.required_ruby_version = '>= 1.8.7' # 1.8.7+ is tested
-  s.add_runtime_dependency 'bundler', '>= 1.3'
+  s.required_ruby_version = '>= 2.0.0'
   s.add_runtime_dependency 'faraday', '~> 0.9', '>= 0.9'
   s.add_runtime_dependency 'faraday_middleware', '~> 0', '>= 0'
-  s.add_runtime_dependency 'faraday-cookie_jar', '>= 0'
-  s.add_runtime_dependency 'multi_json', '>= 0'
-
-  s.add_development_dependency 'coveralls'
-  s.add_development_dependency 'rake'
-  s.add_development_dependency 'simplecov'
-  s.add_development_dependency 'test-unit', '>= 0'
+  s.add_runtime_dependency 'faraday-cookie_jar', '~> 0', '>= 0'
+  s.add_runtime_dependency 'multi_json', '~> 1'
+  s.add_development_dependency 'bundler', '~> 1'
+  s.add_development_dependency 'coveralls', '~> 0'
+  s.add_development_dependency 'rake', '~> 11'
+  s.add_development_dependency 'simplecov', '~> 0'
+  s.add_development_dependency 'test-unit', '~> 3'
 end
