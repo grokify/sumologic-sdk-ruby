@@ -52,6 +52,14 @@ module SumoLogic
       end
     end
 
+    def search_job_messages(search_job, limit=nil, offset=0)
+      params = {:limit => limit, :offset => offset}
+      r = @session.get do |req|
+        req.url "search/jobs/#{search_job['id']}/messages"
+        req.params = params
+      end
+    end
+
     def dashboards(monitors=false)
       params = {dashboards: monitors}
       r = @session.get do |req|
