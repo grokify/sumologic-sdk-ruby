@@ -6,7 +6,7 @@ version = $1
 Gem::Specification.new do |s|
   s.name        = lib
   s.version     = version
-  s.date        = '2016-09-30'
+  s.date        = '2016-10-23'
   s.summary     = 'Ruby Sumo Logic SDK for the Sumo Logic REST API'
   s.authors     = ['John Wang']
   s.email       = 'johncwang@gmail.com'
