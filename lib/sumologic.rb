@@ -43,13 +43,11 @@ module SumoLogic
     end
 
     def search_job_messages(search_job, limit=nil, offset=0)
-      params = {limit: limit, offset: offset}
-      @http.get "search/jobs/#{search_job['id']}/messages", params
+      @http.get "search/jobs/#{search_job['id']}/messages", params_limit_offset(limit, offset)
     end
 
     def search_job_records(search_job, limit=nil, offset=0)
-      params = {limit: limit, offset: offset}
-      @http.get "search/jobs/#{search_job['id']}/records", params
+      @http.get "search/jobs/#{search_job['id']}/records", params_limit_offset(limit, offset)
     end
 
     def collectors(limit=nil, offset=nil)
