@@ -53,7 +53,10 @@ module SumoLogic
     end
 
     def collectors(limit=nil, offset=nil)
-      @http.get 'collectors', {limit: limit, offset: offset}
+      params = {}
+      params[:limit] = limit unless limit.nil?
+      params[:offset] = offset unless offset.nil?
+      @http.get 'collectors', params
     end
 
     def collector(collector_id)
@@ -73,8 +76,10 @@ module SumoLogic
     end
 
     def sources(collector_id, limit=nil, offset=nil)
-      params = {limit: limit, offset: offset}
-      @http.get "collectors/#{collector_id}", params
+      params = {}
+      params[:limit] = limit unless limit.nil?
+      params[:offset] = offset unless offset.nil?
+      @http.get "collectors/#{collector_id}/sources", params
     end
 
     def source(collector_id, source_id)
