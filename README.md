@@ -15,7 +15,7 @@ Ruby interface to the Sumo Logic REST API.
 
 ## Usage
 
-The Ruby SDK ported from the [Sumo Logic Python SDK](https://github.com/SumoLogic/sumologic-python-sdk).
+The Ruby SDK is ported from the [Sumo Logic Python SDK](https://github.com/SumoLogic/sumologic-python-sdk).
 
 The following methods are currently implemented:
 
@@ -23,22 +23,47 @@ The following methods are currently implemented:
 sumo = SumoLogic::Client.new access_id, access_key
 
 # Search
-r = sumo.search(query [, from, to, time_zone])
+r = sumo.search query [, from, to, time_zone]
 
-r = sumo.search_job(query [, from, to, time_zone])
+r = sumo.search_job query [, from, to, time_zone]
 
-r = sumo.search_job_messages({'id' => search_job_id}, limit, offset)
+r = sumo.search_job_messages {'id' => search_job_id}, limit, offset
 
-r = sumo.search_job_records({'id' => search_job_id}, limit, offset)
+r = sumo.search_job_records {'id' => search_job_id}, limit, offset
 
-r = sumo.search_job_status({'id' => search_job_id})
+r = sumo.search_job_status {'id' => search_job_id}
 
 # Dashboards
 r = sumo.dashboards
 
-r = sumo.dashboard(dashboard_id)
+r = sumo.dashboard dashboard_id
 
-r = sumo.dashboard_data(dashboard_id)
+r = sumo.dashboard_data dashboard_id
+
+# Collectors
+r = sumo.collectors [limit, offset]
+
+r = sumo.collector collector_id
+
+r = sumo.update_collector collector, etag
+
+r = sumo.delete_collector collector
+
+# Sources
+r = sumo.sources collector_id [, limit, offset]
+
+r = sumo.source collector_id, source_id
+
+r = sumo.update_source collector_id, source, etag
+
+r = sumo.delete_source collector_id, source
+
+# Content
+r = sumo.create_content path, data
+
+r = sumo.get_content path
+
+r = sumo.delete_content path
 ```
 
 Note, for the search methods, the query parameter can be exactly the same query that is entered into the Sumo Logic web console.
