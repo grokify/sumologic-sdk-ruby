@@ -4,6 +4,7 @@ Sumo Logic Ruby SDK
 [![Gem Version][gem-version-svg]][gem-version-link]
 [![Build Status][build-status-svg]][build-status-link]
 [![Dependency Status][dependency-status-svg]][dependency-status-link]
+[![Codacy Badge][codacy-svg]][codacy-link]
 [![Code Climate][codeclimate-status-svg]][codeclimate-status-link]
 [![Scrutinizer Code Quality][scrutinizer-status-svg]][scrutinizer-status-link]
 [![Downloads][downloads-svg]][downloads-link]
@@ -112,6 +113,8 @@ Sumo Logic Ruby SDK &copy; 2015-2016 by John Wang
  [build-status-link]: https://travis-ci.org/grokify/sumologic-sdk-ruby
  [dependency-status-svg]: https://gemnasium.com/grokify/sumologic-sdk-ruby.svg
  [dependency-status-link]: https://gemnasium.com/grokify/sumologic-sdk-ruby
+ [codacy-svg]: https://api.codacy.com/project/badge/Grade/d6c7f184a9394629a9a65a1406e9f767
+ [codacy-link]: https://www.codacy.com/app/grokify/sumologic-sdk-ruby
  [codeclimate-status-svg]: https://codeclimate.com/github/grokify/sumologic-sdk-ruby/badges/gpa.svg
  [codeclimate-status-link]: https://codeclimate.com/github/grokify/sumologic-sdk-ruby
  [scrutinizer-status-svg]: https://scrutinizer-ci.com/g/grokify/sumologic-sdk-ruby/badges/quality-score.png?b=master

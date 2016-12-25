@@ -3,7 +3,7 @@ require './test/test_helper.rb'
 require 'sumologic'
 
 class SumoLogicTest < Test::Unit::TestCase
-  def testSetup
+  def test_setup
 
     client = SumoLogic::Client.new(
       'myAccessId',

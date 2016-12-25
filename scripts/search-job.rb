@@ -6,11 +6,10 @@ require 'sumologic'
 require 'pp'
 require 'time'
 
-options = {:query => ''}
+options = { query: '' }
 
 OptionParser.new do |opts|
   opts.banner = "Usage: search-job.rb [options]"
-
   opts.on('-i', '--id ACCESS_ID/USERNAME' , 'Access Id / Username')  { |v| options[:access_id]  = v }
   opts.on('-k', '--key ACCESS_KEY/PASSWORD', 'Access Key / Password') { |v| options[:access_key] = v }
   opts.on('-q', '--query QUERY', 'Query')    { |v| options[:query] = v ? v : '' }
@@ -56,10 +55,10 @@ if status['state'] == 'DONE GATHERING RESULTS'
   limit = (count < limit) ? count : limit # compensate bad limit check
   res = sdk.search_job_records(sj, limit)
   pp(res.body)
-  bodyJson = MultiJson.encode(res.body)
+  body_json = MultiJson.encode(res.body)
   out_file = options[:output_path]
   File.open(out_file,'w') do |fh|
-    fh.puts bodyJson
+    fh.puts body_json
   end
   puts "WROTE #{options[:output_path]}" if options[:verbose]
 end
