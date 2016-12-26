@@ -1,6 +1,8 @@
 Sumo Logic Ruby SDK
 ===================
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d6c7f184a9394629a9a65a1406e9f767)](https://www.codacy.com/app/grokify/sumologic-sdk-ruby?utm_source=github.com&utm_medium=referral&utm_content=grokify/sumologic-sdk-ruby&utm_campaign=badger)
+
 [![Gem Version][gem-version-svg]][gem-version-link]
 [![Build Status][build-status-svg]][build-status-link]
 [![Dependency Status][dependency-status-svg]][dependency-status-link]
