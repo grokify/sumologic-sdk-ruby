@@ -101,7 +101,7 @@ Please report these on [Github](https://github.com/grokify/sumologic-sdk-ruby)
 
 ## License
 
-Sumo Logic Ruby SDK is available under an MIT-style license. See [LICENSE.txt](LICENSE.txt) for details.
+Sumo Logic Ruby SDK is available under an MIT-style license. See [LICENSE.md](LICENSE.md) for details.
 
 Sumo Logic Ruby SDK &copy; 2015-2016 by John Wang
 

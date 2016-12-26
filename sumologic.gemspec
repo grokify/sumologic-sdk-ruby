@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.licenses    = ['MIT']
   s.files       = [
     'CHANGELOG.md',
-    'LICENSE.txt',
+    'LICENSE.md',
     'README.md',
     'Rakefile',
     'lib/sumologic.rb',
