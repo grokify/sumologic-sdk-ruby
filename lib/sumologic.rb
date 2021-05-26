@@ -23,11 +23,18 @@ module SumoLogic
       end
     end
 
+    def get(path, params={})
+      @http.post do |req|
+        req.url path
+        req.body = params unless params.empty?
+      end
+    end
+
     def search(query, from_time=nil, to_time=nil, time_zone='UTC')
       @http.get do |req|
         req.url 'logs/search'
         req.params = {q: query, from: from_time, to: to_time, tz: time_zone}
-      end    
+      end
     end
 
     def search_job(query, from_time=nil, to_time=nil, time_zone='UTC')
