@@ -23,7 +23,7 @@ module SumoLogic
       end
     end
 
-    def get(path, params={})
+    def post(path, params={})
       @http.post do |req|
         req.url path
         req.body = params unless params.empty?
