@@ -4,7 +4,7 @@ require 'faraday-cookie_jar'
 require 'multi_json'
 
 module SumoLogic
-  VERSION = '0.1.0'
+  VERSION = '0.1.1'
   URL = 'https://api.sumologic.com/api/v1'
 
   class Client
