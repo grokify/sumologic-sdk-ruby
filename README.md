@@ -61,6 +61,9 @@ r = sumo.create_content path, data
 r = sumo.get_content path
 
 r = sumo.delete_content path
+
+# Low-Level
+r = sumo.post path, data
 ```
 
 Note, for the search methods, the query parameter can be exactly the same query that is entered into the Sumo Logic web console.
