@@ -23,10 +23,10 @@ module SumoLogic
       end
     end
 
-    def post(path, params={})
+    def post(path, data={})
       @http.post do |req|
         req.url path
-        req.body = params unless params.empty?
+        req.body = data unless data.empty?
       end
     end
 
