@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'faraday_middleware', '~> 1.2', '>= 1.2.0'
   s.add_runtime_dependency 'faraday-cookie_jar', '~> 0', '>= 0'
   s.add_runtime_dependency 'multi_json', '~> 1'
-  s.add_development_dependency 'bundler', '~> 2', '>= 2.4.7'
+  s.add_development_dependency 'bundler', '~> 2'
   s.add_development_dependency 'coveralls', '~> 0'
   s.add_development_dependency 'rake', '~> 13', '>= 13.0.6'
   s.add_development_dependency 'simplecov', '~> 0', '>= 0.22.0'
