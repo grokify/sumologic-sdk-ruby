@@ -3,14 +3,10 @@ Sumo Logic Ruby SDK
 
 [![Gem Version][gem-version-svg]][gem-version-link]
 [![Build Status][build-status-svg]][build-status-link]
-[![Dependency Status][dependency-status-svg]][dependency-status-link]
-[![Codacy Badge][codacy-svg]][codacy-link]
 [![Code Climate][codeclimate-status-svg]][codeclimate-status-link]
 [![Scrutinizer Code Quality][scrutinizer-status-svg]][scrutinizer-status-link]
 [![Docs][docs-rubydoc-svg]][docs-rubydoc-link]
 [![License][license-svg]][license-link]
-
-[![Stories in Ready][story-status-svg]][story-status-link]
 
 Ruby interface to the Sumo Logic REST API.
 
