@@ -1,5 +1,5 @@
 require 'faraday'
-require 'faraday_middleware'
+require 'faraday/follow_redirects'
 require 'faraday-cookie_jar'
 require 'multi_json'
 
@@ -14,9 +14,9 @@ module SumoLogic
       @endpoint = endpoint
       headers = {'Content-Type' => 'application/json', 'Accept' => 'application/json'}
       @http = Faraday.new(url: @endpoint, headers: headers) do |conn|
-        conn.basic_auth(access_id, access_key)
-        conn.use      FaradayMiddleware::FollowRedirects, limit: 5
+        conn.use      Faraday::FollowRedirects::Middleware, limit: 5
         conn.use      :cookie_jar
+        conn.request  :authorization, :basic, access_id, access_key
         conn.request  :json
         conn.response :json, content_type: 'application/json'
         conn.adapter  Faraday.default_adapter
